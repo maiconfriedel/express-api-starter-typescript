@@ -1,13 +1,13 @@
 {
   "name": "express-api-starter",
   "version": "1.2.0",
-  "description": " A basic starter for an express.js API",
-  "main": "index.js",
+  "description": " A basic starter for an express.js API using Typescript",
+  "main": "index.ts",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
+    "start": "node src/index.ts",
+    "dev": "tsnd --transpile-only --respawn --ignore-watch node_modules src/index.ts",
     "lint": "eslint --fix src",
-    "test": "mocha --exit"
+    "test": "ts-mocha -p ./tsconfig.json ./test/*.test.ts --exit"
   },
   "keywords": [],
   "author": "CJ R. <cj@null.computer> (https://w3cj.now.sh)",
@@ -24,11 +24,21 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.7",
+    "@types/expect": "^24.3.0",
+    "@types/express": "^4.17.7",
+    "@types/helmet": "^0.0.47",
+    "@types/mocha": "^8.0.1",
+    "@types/morgan": "^1.9.1",
+    "@types/node": "^14.0.27",
     "eslint": "^7.5.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
     "mocha": "^8.0.1",
     "nodemon": "^2.0.4",
-    "supertest": "^4.0.2"
+    "supertest": "^4.0.2",
+    "ts-mocha": "^7.0.0",
+    "ts-node-dev": "^1.0.0-pre.56",
+    "typescript": "^3.9.7"
   }
 }
