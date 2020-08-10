@@ -2,8 +2,11 @@
   "include": ["src/*.ts"],
 
   "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": ".",
     "target": "es2017",
     "module": "commonjs",
+    "sourceMap": true,
 
     "strict": true,
 
