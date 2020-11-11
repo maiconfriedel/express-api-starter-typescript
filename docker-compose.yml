@@ -8,3 +8,12 @@ services:
       - '3333:3333'
     volumes:
       - .:/usr/app
+
+  postgredb:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-1234}
+      PGDATA: /data/postgres
